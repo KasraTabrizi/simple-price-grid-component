@@ -2,7 +2,82 @@ $primary-color-cyan: hsl(179, 62%, 43%);
 $primary-color-brightYellow: hsl(71, 73%, 54%);
 $neutral-color-lightGray: hsl(204, 43%, 93%);
 $neutral-color-grayishBlue: hsl(218, 22%, 67%);
+$general-padding: 30px;
 body {
     font-size: 16px;
     font-family: 'Karla', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "head head" "item1 item2";
+    border-radius: 10px;
+    box-shadow: 0px 2px 20px rgba(146, 139, 139, 0.8);
+    margin: 50px;
+    .item1,
+    .item2 {
+        color: white;
+    }
+}
+
+.heading {
+    grid-area: head;
+    padding: $general-padding;
+    h1 {
+        color: $primary-color-cyan;
+        font-size: 1.5em;
+    }
+    h2 {
+        color: $primary-color-brightYellow;
+        font-size: 1.15em;
+    }
+    p {
+        color: $neutral-color-grayishBlue;
+    }
+}
+
+.item1 {
+    grid-area: item1;
+    background-color: $primary-color-cyan;
+    padding: $general-padding;
+    span {
+        font-size: 1.7em;
+    }
+    button {
+        color: white;
+        border: none;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        background-color: $primary-color-brightYellow;
+        width: 90%;
+        border-radius: 5px;
+        height: 45px;
+        box-shadow: 0px 5px 15px rgba(146, 139, 139, 0.8);
+        transition: 0.5s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.item2 {
+    grid-area: item2;
+    background-color: $neutral-color-grayishBlue;
+    padding: $general-padding;
+    ul {
+        padding: 0;
+        li {
+            color: $neutral-color-lightGray;
+            list-style-type: none;
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
 }
