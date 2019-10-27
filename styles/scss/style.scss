@@ -7,7 +7,7 @@ body {
 .container {
     display: grid;
     grid-template-areas: "head head" "item1 item2";
-    margin: 20px;
+    margin: 20px 20% 0px;
     border-radius: 10px;
     box-shadow: 0px 2px 20px rgba(146, 139, 139, 0.8);
     .item1,
@@ -36,6 +36,7 @@ body {
     grid-area: item1;
     background-color: $primary-color-cyan;
     padding: $general-padding;
+    border-bottom-left-radius: 10px;
     h2 {
         margin: 0;
         padding-top: 10px;
@@ -49,9 +50,9 @@ body {
             }
         }
         sup {
-            font-size: 1.1em;
+            font-size: 1em;
             padding-left: 15px;
-            color: $neutral-color-lightGray;
+            color: $neutral-color-grayishBlue;
         }
     }
     button {
@@ -62,10 +63,12 @@ body {
         padding: 0;
         outline: none;
         background-color: $primary-color-brightYellow;
-        width: 90%;
         border-radius: 5px;
         height: 45px;
-        box-shadow: 0px 5px 15px rgba(146, 139, 139, 0.8);
+        width: 98%;
+        letter-spacing: 1px;
+        font-weight: 700;
+        box-shadow: 0px 5px 15px rgba(116, 111, 111, 0.945);
         transition: 0.5s ease;
         &:hover {
             transform: scale(1.05);
@@ -77,6 +80,7 @@ body {
     grid-area: item2;
     background-color: $neutral-color-grayishBlue;
     padding: $general-padding;
+    border-bottom-right-radius: 10px;
     h2 {
         margin: 0;
         padding-top: 10px;
@@ -103,7 +107,7 @@ body {
 @media screen and (min-width: 375px) and (max-width: 999px) {
     .container {
         grid-template-areas: "head" "item1" "item2";
-        margin: 20px;
+        margin: 20px 5% 0px;
     }
     .heading {
         line-height: 26px;
@@ -125,6 +129,7 @@ body {
     }
     .item1 {
         padding: 20px;
+        border-bottom-left-radius: 0px;
         h2 {
             font-size: 1.2em;
         }
@@ -134,20 +139,16 @@ body {
                     font-size: 2em;
                 }
             }
-            sup {
-                font-size: 1.1em;
-            }
         }
         button {
-            width: 98%;
             font-size: 1em;
-            letter-spacing: 1px;
-            font-weight: 700;
         }
     }
     .item2 {
         color: $neutral-color-lightGray;
         padding: 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         h2 {
             font-size: 1.2em;
         }
@@ -156,6 +157,6 @@ body {
 
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
     .container {
-        margin: 20px 150px 0px;
+        margin: 20px 20% 0px;
     }
 }
