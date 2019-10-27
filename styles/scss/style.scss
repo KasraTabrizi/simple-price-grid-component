@@ -11,9 +11,9 @@ body {
 .container {
     display: grid;
     grid-template-areas: "head head" "item1 item2";
+    margin: 50px;
     border-radius: 10px;
     box-shadow: 0px 2px 20px rgba(146, 139, 139, 0.8);
-    margin: 50px;
     .item1,
     .item2 {
         color: white;
@@ -79,5 +79,76 @@ body {
     text-align: center;
     a {
         color: hsl(228, 45%, 44%);
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 1439px) {
+    .container {
+        grid-template-areas: "head" "item1" "item2";
+        margin: 20px;
+    }
+    .heading {
+        line-height: 26px;
+        padding: 20px;
+        h1 {
+            color: $primary-color-cyan;
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+        h2 {
+            color: $primary-color-brightYellow;
+            font-size: 1em;
+            font-weight: 700;
+        }
+        p {
+            color: $neutral-color-grayishBlue;
+            font-size: 0.9em;
+        }
+    }
+    .item1 {
+        padding: 20px;
+        h2 {
+            font-size: 1.2em;
+            margin: 0;
+            padding-top: 10px;
+        }
+        p {
+            span {
+                &.price {
+                    font-size: 2em;
+                    font-weight: 700;
+                    color: $neutral-color-lightGray;
+                }
+            }
+            sup {
+                font-size: 1.1em;
+                padding-left: 15px;
+                color: $neutral-color-lightGray;
+            }
+        }
+        button {
+            width: 98%;
+            font-size: 1em;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+    }
+    .item2 {
+        color: $neutral-color-lightGray;
+        padding: 20px;
+        h2 {
+            font-size: 1.2em;
+            margin: 0;
+            padding-top: 10px;
+        }
+        ul {
+            padding: 0;
+            li {
+                color: $neutral-color-lightGray;
+                list-style-type: none;
+                padding-top: 4px;
+            }
+        }
     }
 }
