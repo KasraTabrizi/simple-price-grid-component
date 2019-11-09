@@ -49,7 +49,7 @@ body {
 .item1 p sup {
   font-size: 1em;
   padding-left: 15px;
-  color: #98a6bd;
+  color: rgba(229, 239, 245, 0.7);
 }
 .item1 button {
   color: white;
